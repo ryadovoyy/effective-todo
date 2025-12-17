@@ -14,13 +14,7 @@ RUN groupadd -g 1000 www \
 
 WORKDIR /var/www
 
-COPY --chown=www composer.* .
-
-RUN composer install --no-autoloader
-
 COPY --chown=www . .
-
-RUN composer dump-autoload
 
 USER www
 
