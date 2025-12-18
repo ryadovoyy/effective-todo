@@ -9,6 +9,11 @@ This is a REST API service for managing To-Do tasks.
 - MySQL
 - Nginx
 
+### Additional info
+
+- All endpoints are documented in Postman and covered with tests
+- `phpMyAdmin` is present
+
 ## Setup
 
 ### Cloning
@@ -56,4 +61,8 @@ docker compose exec app php artisan migrate
 
 ## Test
 
-Now you are ready to see and test all endpoints. Import `postman-collection.json` in Postman and run the collection. You can also access `phpMyAdmin` on `localhost:8080`.
+Now you are ready to see and test all endpoints. Import `postman-collection.json` in Postman and run the collection. You can also access `phpMyAdmin` on `localhost:8080`. Run tests if you want:
+
+```bash
+docker compose exec app php artisan test
+```
